@@ -1,22 +1,18 @@
 package les1.practicum2;
+//package Opdracht1.practicum2;
 
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.net.*;
 import java.util.Scanner;
+
 
 class Server {
 	public static void main(String[] arg) throws Exception {
 		ServerSocket ss = new ServerSocket(4711);
 		Socket s = ss.accept();
-		Scanner sc = new Scanner(System.in);
-		// InputStream is = s.getInputStream();
-		// int c = is.read();
-		// while (c != -1) {
-		// System.out.print((char) c);
-		// c = is.read();
-		// }
-		System.out.println(sc);
+		Scanner scanner = new Scanner(s.getInputStream());String line = scanner.nextLine();
+		System.out.println(line);
 		s.close();
 		ss.close();
 	}
 }
+
