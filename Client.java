@@ -9,7 +9,6 @@ public class Main {
 		PrintWriter out = new PrintWriter(s.getOutputStream(), true);
 		out.print("tekst");
 		out.flush();
-		// Socket s = new Socket("145.89.166.28", 4711);
 		s.close();
 	}
 
